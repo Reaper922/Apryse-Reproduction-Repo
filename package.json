@@ -5,11 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "build": "npm run copy-webviewer && tsc -b && vite build",
+    "copy-webviewer": "mkdir -p ./public/lib/webviewer && cp -a ./node_modules/@pdftron/webviewer/public/* ./public/lib/webviewer",
+    "preview": "vite preview",
+    "lint": "eslint ."
   },
   "dependencies": {
+    "@pdftron/webviewer": "^11.4.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
@@ -26,6 +28,7 @@
     "prettier": "^3.5.3",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.24.1",
-    "vite": "^6.2.0"
+    "vite": "^6.2.0",
+    "vite-plugin-static-copy": "^2.3.1"
   }
 }
