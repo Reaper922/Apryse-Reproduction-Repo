@@ -5,15 +5,17 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run copy-webviewer && tsc -b && vite build",
+    "build": "tsc -b && vite build",
     "copy-webviewer": "mkdir -p ./public/lib/webviewer && cp -a ./node_modules/@pdftron/webviewer/public/* ./public/lib/webviewer",
     "preview": "vite preview",
     "lint": "eslint ."
   },
   "dependencies": {
     "@pdftron/webviewer": "^11.4.0",
+    "@tailwindcss/vite": "^4.1.4",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
