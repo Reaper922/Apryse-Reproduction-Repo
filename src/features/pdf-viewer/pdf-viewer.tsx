@@ -24,7 +24,12 @@ function PdfViewer() {
         fullAPI: true,
       },
       viewer.current!
-    ).then(instance => {
+    ).then(async instance => {
+      instance.UI.enableFeatures([
+        instance.UI.Feature.FilePicker,
+        instance.UI.Feature.ContentEdit,
+      ]);
+
       setInstance(instance);
     });
   }, [licenseKey, initialDoc, viewer, setInstance]);

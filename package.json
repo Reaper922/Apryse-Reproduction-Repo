@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "tauri": "tauri",
     "copy-webviewer": "mkdir -p ./public/lib/webviewer && cp -a ./node_modules/@pdftron/webviewer/public/* ./public/lib/webviewer",
     "preview": "vite preview",
     "lint": "eslint ."
@@ -13,12 +14,16 @@
   "dependencies": {
     "@pdftron/webviewer": "^11.4.0",
     "@tailwindcss/vite": "^4.1.4",
+    "@tauri-apps/api": "^2.5.0",
+    "@tauri-apps/plugin-dialog": "^2.2.1",
+    "@tauri-apps/plugin-fs": "^2.2.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "tailwindcss": "^4.1.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
+    "@tauri-apps/cli": "^2.5.0",
     "@types/node": "^22.14.1",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
