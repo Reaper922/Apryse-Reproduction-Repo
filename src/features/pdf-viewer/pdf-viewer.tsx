@@ -4,8 +4,10 @@ import { usePdfViewerInstance } from '@/features/pdf-viewer/pdf-viewer-hook';
 
 function PdfViewer() {
   const path = '/lib/webviewer';
-  const licenseKey = import.meta.env.VITE_APRYSE_LICENSE_KEY;
-  const initialDoc = import.meta.env.VITE_APRYSE_INITIAL_DOC;
+  const licenseKey =
+    'demo:1744730630292:610dc9bb0300000000aa0ed34588c67b5ce278a20f9109a9f8b0e1c37b';
+  const initialDoc =
+    'https://pdftron.s3.amazonaws.com/downloads/pl/demo-annotated.pdf';
 
   const viewer = useRef(null);
   const hasInitialised = useRef(false);
